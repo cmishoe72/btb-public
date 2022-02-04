@@ -8,7 +8,7 @@ const PREFIX = '>';
 var version = '4.2.0';
 
 bot.on('ready', () => {
-    console.log('It is online 4head');
+    console.log('It is online 5head');
 })
 
 bot.on('message', message => {
