@@ -87,6 +87,26 @@ bot.on('message', message => {
                     });
                 }
 
+                if (message.content.toLowerCase() == "machinist") {
+                    message.channel.send("Which BIS? **Asphodelos**, **Crafted Gear**, **Mix**");
+                    const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+                    collector.on('collect', message => {
+                        if ((message.content.toLowerCase() == "asphodelos")) {
+                            message.channel.send("https://etro.gg/gearset/6b4b1ba5-a821-41a0-b070-b1f50e986f85");
+                            collector.stop();
+                        }
+                        else if ((message.content.toLowerCase() == "crafted gear")) {
+                            message.channel.send("https://etro.gg/gearset/7ef196d1-b91e-4166-a1c0-af279fb4a758");
+                            collector.stop();
+                        }
+                        else if ((message.content.toLowerCase() == "mix")) {
+                            message.channel.send("https://etro.gg/gearset/0ab4cd5c-da46-48db-91b2-762ae2c9c7ac");
+                            collector.stop();
+                        }
+
+                    });
+                }
+
                 if (message.content.toLowerCase() == "bard") {
                     message.channel.send("https://etro.gg/gearset/cec981af-25c7-4ffb-905e-3024411b797a");
 
