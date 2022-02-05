@@ -29,6 +29,9 @@ bot.on('message', message => {
         const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'menacing');
         message.react(emoji);
     }
+    if (message.content.toLowerCase().includes('friday night')) {
+        message.channel.send("https://cdn.discordapp.com/attachments/403698796099272704/939254914587168818/Friday_Night.mp4");
+    }
     if (!message.content.startsWith(PREFIX) || message.author.bot) return;
     switch (args[0]) {
         case 'server-info':
