@@ -37,6 +37,9 @@ bot.on('message', message => {
         case 'bakamitai':
             message.channel.send("https://www.youtube.com/watch?v=Z2NXAk-XkoQ");
             break;
+        case "xennek":
+            message.channel.send("GAMING");
+            break;
         case 'bis':
             message.channel.send("What job?")
             const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
