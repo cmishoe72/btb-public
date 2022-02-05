@@ -56,12 +56,12 @@ bot.on('message', message => {
                             message.channel.send("https://etro.gg/gearset/84c1f493-7f65-4d9e-bd3c-34965c75cf41");
                             collector.stop();
                         }
-                        else if ((message.content.toLowerCase() == "slow")) {
-                            message.channel.send("test");
+                        else if ((message.content.toLowerCase() == "2.07")) {
+                            message.channel.send("https://etro.gg/gearset/17d99be3-021c-4d6c-a9e3-0504e62c8c1f");
                             collector.stop();
                         }
-                        else if ((message.content.toLowerCase() == "test")) {
-                            message.channel.send("test1");
+                        else if ((message.content.toLowerCase() == "2.14")) {
+                            message.channel.send("https://etro.gg/gearset/3a7c7f45-b715-465d-a377-db458045506a");
                             collector.stop();
                         }
 
