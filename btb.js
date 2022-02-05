@@ -31,6 +31,9 @@ bot.on('message', message => {
     }
     if (!message.content.startsWith(PREFIX) || message.author.bot) return;
     switch (args[0]) {
+        case 'server-info':
+            message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
+            break;
         case 'bakamitai':
             message.channel.send("https://www.youtube.com/watch?v=Z2NXAk-XkoQ");
             break;
