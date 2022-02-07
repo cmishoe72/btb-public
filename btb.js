@@ -29,6 +29,10 @@ bot.on('message', message => {
         const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'menacing');
         message.react(emoji);
     }
+    if (message.content.toLowerCase().includes('he doesnt know')) {
+        const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'pepelaugh');
+        message.react(emoji);
+    }
     if (!message.content.startsWith(PREFIX) || message.author.bot) return;
     switch (args[0]) {
         case 'server-info':
