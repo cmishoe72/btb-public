@@ -29,9 +29,6 @@ bot.on('message', message => {
         const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'menacing');
         message.react(emoji);
     }
-    if (message.content.toLowerCase().includes('friday night')) {
-        message.channel.send("https://cdn.discordapp.com/attachments/403698796099272704/939254914587168818/Friday_Night.mp4");
-    }
     if (!message.content.startsWith(PREFIX) || message.author.bot) return;
     switch (args[0]) {
         case 'server-info':
@@ -42,6 +39,9 @@ bot.on('message', message => {
             break;
         case "xennek":
             message.channel.send("GAMING");
+            break;
+        case "code":
+            message.channel.send("https://media.discordapp.net/attachments/624758031154020384/940056464242909294/unknown.png")
             break;
         case 'bis':
             message.channel.send("What job?")
@@ -151,6 +151,7 @@ bot.on('message', message => {
                             collector.stop();
                         }
                     });
+                    
                 }
             })
             break;
