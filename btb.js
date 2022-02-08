@@ -1,5 +1,7 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
+const {Client, Intents} = require('discord.js');
+const client = new Client({
+    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGES]
+});
 const config = require('./config.json');
 
 
@@ -7,11 +9,11 @@ const PREFIX = '>';
 
 var version = '4.2.0';
 
-bot.on('ready', () => {
+client.on('ready', () => {
     console.log('It is online 5head');
 })
 
-bot.on('message', message => {
+client.on('message', message => {
     let args = message.content.substring(PREFIX.length).split(" ");
 
 
@@ -26,7 +28,7 @@ bot.on('message', message => {
         }
     }
     if (message.content.toLowerCase().includes('dio')) {
-        const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'menacing');
+        const emoji = client.emojis.cache.find(emoji => emoji.name === 'menacing');
         message.react(emoji);
     }
     if (message.content.toLowerCase().includes('he doesnt know')) {
@@ -42,7 +44,15 @@ bot.on('message', message => {
             message.channel.send("https://www.youtube.com/watch?v=Z2NXAk-XkoQ");
             break;
         case "xennek":
-            message.channel.send("GAMING");
+            message.channel.send("GAMING").then(sentMessage => {
+                sentMessage.react("🇬");
+                sentMessage.react("🇦");
+                sentMessage.react("🇲");
+                sentMessage.react("🇮");
+                sentMessage.react("🇳");
+                const gemoji = client.emojis.cache.find(emoji => emoji.name === 'gemoji');
+                sentMessage.react(gemoji);
+            })
             break;
         case "code":
             message.channel.send("https://media.discordapp.net/attachments/624758031154020384/940056464242909294/unknown.png")
@@ -164,4 +174,4 @@ bot.on('message', message => {
 
 })
 
-bot.login(config.token);
+client.login(config.token);
