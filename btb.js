@@ -1,21 +1,46 @@
-const {Client, Intents} = require('discord.js');
+const { Client, Collection, Intents } = require('discord.js');
 const client = new Client({
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGES]
 });
-const config = require('./config.json');
+const { token } = require('./config.json');
+const fs = require('fs');
 
+client.commands = new Collection();
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
+for (const file of commandFiles) {
+	const command = require(`./commands/${file}`);
+	// Set a new item in the Collection
+	// With the key as the command name and the value as the exported module
+	client.commands.set(command.data.name, command);
+}
 const PREFIX = '>';
 
 var version = '4.2.0';
 
-client.on('ready', () => {
+client.once('ready', () => {
     console.log('It is online 5head');
 })
 
+client.on('interactionCreate', async interaction => {
+	if (!interaction.isCommand()) return;
+
+	const command = client.commands.get(interaction.commandName);
+
+	if (!command) return;
+    
+	try {
+		await command.execute(interaction);
+	} catch (error) {
+		console.error(error);
+		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+	}
+});
+
+
 client.on('message', message => {
     let args = message.content.substring(PREFIX.length).split(" ");
-
+    
 
 
     //Reactions/Replies
@@ -32,7 +57,7 @@ client.on('message', message => {
         message.react(emoji);
     }
     if (message.content.toLowerCase().includes('he doesnt know')) {
-        const emoji = message.guild.emojis.cache.find(emoji => emoji.name === 'pepelaugh');
+        const emoji = client.emojis.cache.find(emoji => emoji.name === 'pepelaugh');
         message.react(emoji);
     }
     if (!message.content.startsWith(PREFIX) || message.author.bot) return;
@@ -165,7 +190,7 @@ client.on('message', message => {
                             collector.stop();
                         }
                     });
-                    
+
                 }
             })
             break;
@@ -174,4 +199,4 @@ client.on('message', message => {
 
 })
 
-client.login(config.token);
+client.login(token);

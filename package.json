@@ -1,10 +1,26 @@
 {
+  "name": "btb-public",
+  "version": "1.0.0",
+  "description": "This bot was made because my friend and I want a quick way to get access to Best In Slots and other info from a\r game called Final Fantasy 14",
+  "main": "btb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmishoe72/btb-public.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmishoe72/btb-public/issues"
+  },
+  "homepage": "https://github.com/cmishoe72/btb-public#readme",
   "dependencies": {
     "@discordjs/builders": "^0.12.0",
     "@discordjs/rest": "^0.3.0",
     "discord-api-types": "^0.26.1",
-    "discord.js": "^12.5.3",
-    "dotenv": "^16.0.0",
+    "discord.js": "^13.6.0",
     "node": "^17.4.0"
   }
 }
