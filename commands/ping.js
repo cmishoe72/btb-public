@@ -1,13 +1,12 @@
 
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageActionRow, MessageSelectMenu, Message } = require('discord.js');
-const {Client, MessageEmbed } = require('discord.js');
+const { MessageActionRow, MessageSelectMenu } = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('ping')
 		.setDescription('Replies with Pong!'),
-	async execute(message, client, args) {
+	async execute(interaction) {
 		const row = new MessageActionRow()
 			.addComponents(
 				new MessageSelectMenu()
@@ -26,20 +25,8 @@ module.exports = {
 						},
 					]),
 			);
-		
-		const embed = new MessageEmbed().setTitle("Choose an option!");
-		const filter = (interaction) => interaction.isSelectMenu() && interaction.user.id === message.channel.id;
-		const collector = message.channel.createMessageComponentCollector({
-			filter,
-			max: "2",
-		});
-		
-		collector.on("collect:", async (collected) => {
-			const value = collected.values[0];
-			console.log(value);
-			collected.deferUpdate();
-			collected.channel.send({ content: value });
-		})
-		message.channel.send({ embeds: [embed], components: [row] });
+
+		await interaction.reply({ content: 'Pong!', components: [row] });
 	},
 };
+

@@ -25,13 +25,14 @@ client.once('ready', () => {
 const wait = require('util').promisify(setTimeout);
 
 client.on('interactionCreate', async interaction => {
-	if (!interaction.isSelectMenu()) return;
+    if (!interaction.isSelectMenu()) return;
 
-	if (interaction.customId === 'select') {
-		await interaction.deferUpdate();
-		await wait(4000);
-		await interaction.editReply({ content: 'Something was selected!', components: [] });
-	}
+    if (interaction.customId === 'select') {
+        await interaction.deferUpdate();
+        await wait(4000);
+        await interaction.editReply({ content: 'Something was selected!', components: [] });
+
+    }
 });
 
 client.on('interactionCreate', async interaction => {
