@@ -4,6 +4,7 @@ const client = new Client({
 });
 const { token } = require('./config.json');
 const fs = require('fs');
+const Discord = require('discord.js') // I need to fix this later. Too Bad!
 
 client.commands = new Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
