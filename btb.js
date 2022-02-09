@@ -8,20 +8,20 @@ const Discord = require('discord.js') // I need to fix this later. Too Bad!
 
 client.commands = new Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
+const functions = fs.readdirSync('./functions').filter(file => file.endsWith('.js'));
 
-for (const file of commandFiles) {
-    const command = require(`./commands/${file}`);
-    // Set a new item in the Collection
-    // With the key as the command name and the value as the exported module
-    client.commands.set(command.data.name, command);
-}
+(async () => {
+    for (file of functions) {
+        require(`./functions/${file}`)(client);
+    }
+    client.handleEvents(eventFiles, "./events");
+    client.handleCommands(commandFiles, "./commands");
+    client.login(token);
+})();
 const PREFIX = '>';
 
 var version = '4.2.0';
-
-client.once('ready', () => {
-    console.log('It is online 5head');
-})
 
 const wait = require('util').promisify(setTimeout);
 
@@ -36,20 +36,7 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
-client.on('interactionCreate', async interaction => {
-    if (!interaction.isCommand()) return;
 
-    const command = client.commands.get(interaction.commandName);
-
-    if (!command) return;
-
-    try {
-        await command.execute(interaction);
-    } catch (error) {
-        console.error(error);
-        await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-    }
-});
 
 
 client.on('messageCreate', message => {
@@ -213,4 +200,3 @@ client.on('messageCreate', message => {
 
 })
 
-client.login(token);
