@@ -25,20 +25,6 @@ var version = '4.2.0';
 
 const wait = require('util').promisify(setTimeout);
 
-client.on('interactionCreate', async interaction => {
-    if (!interaction.isSelectMenu()) return;
-
-    if (interaction.customId === 'select') {
-        await interaction.deferUpdate();
-        await wait(4000);
-        await interaction.editReply({ content: 'Something was selected!', components: [] });
-
-    }
-});
-
-
-
-
 client.on('messageCreate', message => {
     let args = message.content.substring(PREFIX.length).split(" ");
 
