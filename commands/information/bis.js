@@ -59,7 +59,7 @@ module.exports = {
 			const meleeEmbed = new MessageEmbed()
 			.setTitle("Best in slots for melee jobs")
 			.setDescription("Please chose a job")
-			.setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/R/laSrEkvlK_7NNbNZ3JErTqzaR8.png")
+			.setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/R/laSrEkvlK_7NNbNZ3JErTqzaR8.png");
 			const row = new MessageActionRow()
 				.addComponents(
 					new MessageButton()
