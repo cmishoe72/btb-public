@@ -23,6 +23,7 @@ module.exports = {
                 } else if (interaction.customId.includes('bard')) {
                     await interaction.reply({ ephemeral: true, content: "https://etro.gg/gearset/cec981af-25c7-4ffb-905e-3024411b797a" });
                 } else if (interaction.customId.includes('dark-knight')) {
+                    // All should look like dark knights
                     const drkEmbed = new MessageEmbed()
                     .setTitle("Best in slot(s)")
                     .setDescription("Dark Knight")

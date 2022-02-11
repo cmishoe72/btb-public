@@ -23,8 +23,6 @@ const PREFIX = '>';
 
 var version = '4.2.0';
 
-const wait = require('util').promisify(setTimeout);
-
 client.on('messageCreate', message => {
     let args = message.content.substring(PREFIX.length).split(" ");
 
