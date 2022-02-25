@@ -88,34 +88,34 @@ module.exports = {
                         .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/p/y8GHAXX4qhY7D-yqnCqtEPkjoo.png")
                     await interaction.reply({ ephemeral: true, embeds: [brdEmbed] });
                 }
-                
+
                 //MAGICAL
 
                 else if (interaction.customId.includes('summoner')) {
                     const brdEmbed = new MessageEmbed()
                         .setTitle("Best in slot(s)")
-                        .setDescription("Bard")
+                        .setDescription("Summoner")
                         .setColor("#813b3c")
                         .setDescription("2.48: https://etro.gg/gearset/cec981af-25c7-4ffb-905e-3024411b797a")
-                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png")
+                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/b/ZwJFxv3XnfqB5N6tKbgXKnj6BU.png")
                     await interaction.reply({ ephemeral: true, embeds: [brdEmbed] });
                 }
                 else if (interaction.customId.includes('black-mage')) {
                     const brdEmbed = new MessageEmbed()
                         .setTitle("Best in slot(s)")
-                        .setDescription("Bard")
+                        .setDescription("Black Mage")
                         .setColor("#813b3c")
                         .setDescription("2.48: https://etro.gg/gearset/cec981af-25c7-4ffb-905e-3024411b797a")
-                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png")
+                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/A/7JuT00VSwaFqTfcTYUCUnGPFQE.png")
                     await interaction.reply({ ephemeral: true, embeds: [brdEmbed] });
                 }
                 else if (interaction.customId.includes('red-mage')) {
                     const brdEmbed = new MessageEmbed()
                         .setTitle("Best in slot(s)")
-                        .setDescription("Bard")
+                        .setDescription("Red Mage")
                         .setColor("#813b3c")
                         .setDescription("2.48: https://etro.gg/gearset/cec981af-25c7-4ffb-905e-3024411b797a")
-                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png")
+                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/C/NRnqJxzRtbDKR1ZHzxazWBBR2Y.png")
                     await interaction.reply({ ephemeral: true, embeds: [brdEmbed] });
                 }
 
@@ -125,81 +125,81 @@ module.exports = {
                 else if (interaction.customId.includes('sage')) {
                     const brdEmbed = new MessageEmbed()
                         .setTitle("Best in slot(s)")
-                        .setDescription("Bard")
+                        .setDescription("Sage")
                         .setColor("#467737")
                         .setDescription("2.48: https://etro.gg/gearset/cec981af-25c7-4ffb-905e-3024411b797a")
-                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png")
+                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/e/G0lQTD01LdCGk5pECSc7fbbmbM.png")
                     await interaction.reply({ ephemeral: true, embeds: [brdEmbed] });
                 }
                 else if (interaction.customId.includes('astrologian')) {
                     const brdEmbed = new MessageEmbed()
                         .setTitle("Best in slot(s)")
-                        .setDescription("Bard")
+                        .setDescription("Astrologian")
                         .setColor("#467737")
                         .setDescription("2.48: https://etro.gg/gearset/cec981af-25c7-4ffb-905e-3024411b797a")
-                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png")
+                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/E/g7JY4S1D-9S26VarEuIkPGIrFM.png")
                     await interaction.reply({ ephemeral: true, embeds: [brdEmbed] });
                 }
                 else if (interaction.customId.includes('white-mage')) {
                     const brdEmbed = new MessageEmbed()
                         .setTitle("Best in slot(s)")
-                        .setDescription("Bard")
+                        .setDescription("White Mage")
                         .setColor("#467737")
                         .setDescription("2.48: https://etro.gg/gearset/cec981af-25c7-4ffb-905e-3024411b797a")
-                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png")
+                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/G/Na619RGtVtbEvNn1vyFoSlvZ84.png")
                     await interaction.reply({ ephemeral: true, embeds: [brdEmbed] });
                 }
                 else if (interaction.customId.includes('scholar')) {
                     const brdEmbed = new MessageEmbed()
                         .setTitle("Best in slot(s)")
-                        .setDescription("Bard")
+                        .setDescription("Scholar")
                         .setColor("#467737")
                         .setDescription("2.48: https://etro.gg/gearset/cec981af-25c7-4ffb-905e-3024411b797a")
-                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/b/d7BM1x8OZRZU-9fTk-D7g1t2oc.png")
+                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/s/2r8fm3U0Io7Pw1XT1tvnjPthp4.png")
                     await interaction.reply({ ephemeral: true, embeds: [brdEmbed] });
                 }
 
                 // TANKS
+                else if (interaction.customId.includes('paladin')) {
 
-            } else if (interaction.customId.includes('paladin')) {
+                    const drkEmbed = new MessageEmbed()
+                        .setTitle("Best in slot(s)")
+                        .setDescription("Paladin")
+                        .setColor("#485ecf")
+                        .setDescription("2.43: https://etro.gg/gearset/dda8aef5-41e4-40b6-813c-df306e1f1cee \n2.40: https://etro.gg/gearset/61e6c1e6-83a9-4d3b-9eb9-17f22be19bd9 \n2.45: https://etro.gg/gearset/038bd13b-f408-4cb2-acb0-00ac33ccfe64")
+                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/V/NUXU4h6iXzF8HS4BxHKYf7vOa0.png")
+                    await interaction.reply({ ephemeral: true, embeds: [drkEmbed] });
+                }
+                else if (interaction.customId.includes('warrior')) {
 
-                const drkEmbed = new MessageEmbed()
-                    .setTitle("Best in slot(s)")
-                    .setDescription("Dark Knight")
-                    .setColor("#485ecf")
-                    .setDescription("2.43: https://etro.gg/gearset/dda8aef5-41e4-40b6-813c-df306e1f1cee \n2.40: https://etro.gg/gearset/61e6c1e6-83a9-4d3b-9eb9-17f22be19bd9 \n2.45: https://etro.gg/gearset/038bd13b-f408-4cb2-acb0-00ac33ccfe64")
-                    .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png")
-                await interaction.reply({ ephemeral: true, embeds: [drkEmbed] });
-            }
-            else if (interaction.customId.includes('warrior')) {
+                    const drkEmbed = new MessageEmbed()
+                        .setTitle("Best in slot(s)")
+                        .setDescription("Warrior")
+                        .setColor("#485ecf")
+                        .setDescription("2.43: https://etro.gg/gearset/dda8aef5-41e4-40b6-813c-df306e1f1cee \n2.40: https://etro.gg/gearset/61e6c1e6-83a9-4d3b-9eb9-17f22be19bd9 \n2.45: https://etro.gg/gearset/038bd13b-f408-4cb2-acb0-00ac33ccfe64")
+                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/0/U3f8Q98TbAeGvg_vXiHGOaa2d4.png")
+                    await interaction.reply({ ephemeral: true, embeds: [drkEmbed] });
+                }
+                else if (interaction.customId.includes('dark-knight')) {
 
-                const drkEmbed = new MessageEmbed()
-                    .setTitle("Best in slot(s)")
-                    .setDescription("Dark Knight")
-                    .setColor("#485ecf")
-                    .setDescription("2.43: https://etro.gg/gearset/dda8aef5-41e4-40b6-813c-df306e1f1cee \n2.40: https://etro.gg/gearset/61e6c1e6-83a9-4d3b-9eb9-17f22be19bd9 \n2.45: https://etro.gg/gearset/038bd13b-f408-4cb2-acb0-00ac33ccfe64")
-                    .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png")
-                await interaction.reply({ ephemeral: true, embeds: [drkEmbed] });
-            }
-            else if (interaction.customId.includes('dark-knight')) {
+                    const drkEmbed = new MessageEmbed()
+                        .setTitle("Best in slot(s)")
+                        .setDescription("Dark Knight")
+                        .setColor("#485ecf")
+                        .setDescription("2.43: https://etro.gg/gearset/dda8aef5-41e4-40b6-813c-df306e1f1cee \n2.40: https://etro.gg/gearset/61e6c1e6-83a9-4d3b-9eb9-17f22be19bd9 \n2.45: https://etro.gg/gearset/038bd13b-f408-4cb2-acb0-00ac33ccfe64")
+                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png")
+                    await interaction.reply({ ephemeral: true, embeds: [drkEmbed] });
+                }
+                else if (interaction.customId.includes('gunbreaker')) {
 
-                const drkEmbed = new MessageEmbed()
-                    .setTitle("Best in slot(s)")
-                    .setDescription("Dark Knight")
-                    .setColor("#485ecf")
-                    .setDescription("2.43: https://etro.gg/gearset/dda8aef5-41e4-40b6-813c-df306e1f1cee \n2.40: https://etro.gg/gearset/61e6c1e6-83a9-4d3b-9eb9-17f22be19bd9 \n2.45: https://etro.gg/gearset/038bd13b-f408-4cb2-acb0-00ac33ccfe64")
-                    .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png")
-                await interaction.reply({ ephemeral: true, embeds: [drkEmbed] });
-            }
-            else if (interaction.customId.includes('gunbreaker')) {
-
-                const drkEmbed = new MessageEmbed()
-                    .setTitle("Best in slot(s)")
-                    .setDescription("Dark Knight")
-                    .setColor("#485ecf")
-                    .setDescription("2.43: https://etro.gg/gearset/dda8aef5-41e4-40b6-813c-df306e1f1cee \n2.40: https://etro.gg/gearset/61e6c1e6-83a9-4d3b-9eb9-17f22be19bd9 \n2.45: https://etro.gg/gearset/038bd13b-f408-4cb2-acb0-00ac33ccfe64")
-                    .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/9/5JT3hJnBNPZSLAijAF9u7zrueQ.png")
-                await interaction.reply({ ephemeral: true, embeds: [drkEmbed] });
+                    const drkEmbed = new MessageEmbed()
+                        .setTitle("Best in slot(s)")
+                        .setDescription("Gunbreaker")
+                        .setColor("#485ecf")
+                        .setDescription("2.43: https://etro.gg/gearset/dda8aef5-41e4-40b6-813c-df306e1f1cee \n2.40: https://etro.gg/gearset/61e6c1e6-83a9-4d3b-9eb9-17f22be19bd9 \n2.45: https://etro.gg/gearset/038bd13b-f408-4cb2-acb0-00ac33ccfe64")
+                        .setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/8/fc5PYpEFGrg4qPYDq_YBbCy1X0.png")
+                    await interaction.reply({ ephemeral: true, embeds: [drkEmbed] });
+                }
             }
         }
     }

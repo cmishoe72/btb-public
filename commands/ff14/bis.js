@@ -95,7 +95,7 @@ module.exports = {
 				.addComponents(
 					new MessageButton()
 						.setCustomId('summoner-button')
-						.setLabel('MCH')
+						.setLabel('SMN')
 						.setStyle("DANGER"),
 					new MessageButton()
 						.setCustomId("black-mage-button")
