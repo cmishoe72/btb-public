@@ -4,7 +4,7 @@ const { MessageActionRow, MessageButton, MessageEmbed, MessageAttachment } = req
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('bis')
-		.setDescription('Choose the job type for the best in slot you want')
+		.setDescription('Choose the job type for the P1s-P4s best in slot you want')
 		.addSubcommand(subcommand =>
 			subcommand
 				.setName("ranged")
@@ -34,9 +34,9 @@ module.exports = {
 	async execute(interaction) {
 		if (interaction.options.getSubcommand() === "ranged") {
 			const rangedEmbed = new MessageEmbed()
-			.setTitle("Best in slots for ranged jobs")
-			.setDescription("Please chose a job")
-			.setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/R/laSrEkvlK_7NNbNZ3JErTqzaR8.png")
+				.setTitle("Best in slots for ranged jobs")
+				.setDescription("Please chose a job")
+				.setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/R/laSrEkvlK_7NNbNZ3JErTqzaR8.png")
 
 			const row = new MessageActionRow()
 				.addComponents(
@@ -57,9 +57,9 @@ module.exports = {
 		}
 		if (interaction.options.getSubcommand() === "melee") {
 			const meleeEmbed = new MessageEmbed()
-			.setTitle("Best in slots for melee jobs")
-			.setDescription("Please chose a job")
-			.setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/R/laSrEkvlK_7NNbNZ3JErTqzaR8.png");
+				.setTitle("Best in slots for melee jobs")
+				.setDescription("Please chose a job")
+				.setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/R/laSrEkvlK_7NNbNZ3JErTqzaR8.png");
 			const row = new MessageActionRow()
 				.addComponents(
 					new MessageButton()
@@ -88,9 +88,9 @@ module.exports = {
 		}
 		if (interaction.options.getSubcommand() === "magical") {
 			const magicalEmbed = new MessageEmbed()
-			.setTitle("Best in slots for magical jobs")
-			.setDescription("Please chose a job")
-			.setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/R/laSrEkvlK_7NNbNZ3JErTqzaR8.png")
+				.setTitle("Best in slots for magical jobs")
+				.setDescription("Please chose a job")
+				.setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/R/laSrEkvlK_7NNbNZ3JErTqzaR8.png")
 			const row = new MessageActionRow()
 				.addComponents(
 					new MessageButton()
@@ -110,9 +110,9 @@ module.exports = {
 		}
 		if (interaction.options.getSubcommand() === "healer") {
 			const healerEmbed = new MessageEmbed()
-			.setTitle("Best in slots for healer jobs")
-			.setDescription("Please chose a job")
-			.setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png")
+				.setTitle("Best in slots for healer jobs")
+				.setDescription("Please chose a job")
+				.setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/e/V5xx3kfnREBO-2xWbTUW2Csy_Q.png")
 			const row = new MessageActionRow()
 				.addComponents(
 					new MessageButton()
@@ -136,9 +136,9 @@ module.exports = {
 		}
 		if (interaction.options.getSubcommand() === "tank") {
 			const tankEmbed = new MessageEmbed()
-			.setTitle("Best in slots for tank jobs")
-			.setDescription("Please chose a job")
-			.setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png")
+				.setTitle("Best in slot(s) for tank jobs")
+				.setDescription("Please chose a job:")
+				.setThumbnail("https://img.finalfantasyxiv.com/lds/promo/h/d/rFrCBcRe9YrmPvb4fZkuFksSLw.png")
 			const row = new MessageActionRow()
 				.addComponents(
 					new MessageButton()
@@ -158,7 +158,7 @@ module.exports = {
 						.setLabel("GNB")
 						.setStyle("PRIMARY"),
 				)
-			await interaction.reply({ ephemeral: true, embeds: [tankEmbed], content: 'Which job?', components: [row] });
+			await interaction.reply({ ephemeral: true, embeds: [tankEmbed], components: [row] });
 		}
 
 	},
