@@ -26,8 +26,6 @@ var version = '4.2.0';
 client.on('messageCreate', message => {
     let args = message.content.substring(PREFIX.length).split(" ");
 
-
-
     //Reactions/Replies
     if (message.content === "Am I cool?") {
         if (message.author.id === '528772884823539722') {
@@ -67,6 +65,8 @@ client.on('messageCreate', message => {
         case "code":
             message.channel.send("https://media.discordapp.net/attachments/624758031154020384/940056464242909294/unknown.png")
             break;
+
+        // OLD BIS COMMAND DELETE EVENTUALLY
         case 'bis':
             message.channel.send("What job?")
             const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });

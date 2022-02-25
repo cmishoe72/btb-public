@@ -15,8 +15,9 @@ module.exports = {
                 await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
             }
         } else if (interaction.isButton()) {
-            // RANGED
+            // BIS BUTTON COMMANDS
             if (interaction.customId.includes('-button')) {
+                // RANGED                
                 if (interaction.customId.includes('machinist')) {
                     const mchEmbed = new MessageEmbed()
                         .setTitle("Best in slot(s)")
