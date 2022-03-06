@@ -5,7 +5,7 @@ const fs = require('fs')
 
 // Place your client and guild ids here
 const clientId = '938962365049872465';
-const guildId = '938965585285484614';
+const guildId = '915013133481943050';
 
 
 module.exports = (client) => {
