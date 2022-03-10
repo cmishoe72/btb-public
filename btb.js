@@ -38,7 +38,7 @@ client.on('messageCreate', message => {
             message.channel.send("Yes you are!");
         }
     }
-    if (message.content.toLowerCase() === "it's okay Corban i think you're cool") {
+    if (message.content.toLowerCase() === "it's okay corban i think you're cool") {
             message.channel.send("Don't lie to him.");
     }
     
