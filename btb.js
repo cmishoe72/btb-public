@@ -27,14 +27,21 @@ client.on('messageCreate', message => {
     let args = message.content.substring(PREFIX.length).split(" ");
 
     //Reactions/Replies
-    if (message.content === "Am I cool?") {
+    if (message.content.toLowerCase() === "Am I cool?") {
         if (message.author.id === '528772884823539722') {
-            message.channel.send('No you are not');
+            message.channel.send('No.');
+        }
+        else if  (message.author.id === '301931480739872769') {
+            message.channel.send("If this is Corban on Mila's account, no. If this is Mila, yes. ");
         }
         else {
             message.channel.send("Yes you are!");
         }
     }
+    if (message.content.toLowerCase() === "It's okay Corban I think you're cool") {
+            message.channel.send("Don't lie to him.");
+    }
+    
     if (message.content.toLowerCase().includes('dio')) {
         const emoji = client.emojis.cache.find(emoji => emoji.name === 'menacing');
         message.react(emoji);
