@@ -27,7 +27,7 @@ client.on('messageCreate', message => {
     let args = message.content.substring(PREFIX.length).split(" ");
 
     //Reactions/Replies
-    if (message.content.toLowerCase() === "Am I cool?") {
+    if (message.content.toLowerCase() === "am i cool?") {
         if (message.author.id === '528772884823539722') {
             message.channel.send('No.');
         }
