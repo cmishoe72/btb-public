@@ -72,6 +72,16 @@ client.on('messageCreate', message => {
         case "code":
             message.channel.send("https://media.discordapp.net/attachments/624758031154020384/940056464242909294/unknown.png")
             break;
+        case "uwu":
+            const collector1 = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+            collector1.on('collect', message => {
+                if (message.content.toLowerCase().includes("r") || message.content.toLowerCase().includes("l")) {
+                    newMessage = message.content.toLowerCase().replace(/l|r/gi, "w")
+                    message.channel.send(newMessage)
+                    collector1.stop();
+                }
+            });
+            break;
 
         // OLD BIS COMMAND DELETE EVENTUALLY
         case 'bis':
